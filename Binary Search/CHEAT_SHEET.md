@@ -23,8 +23,6 @@ This cheat sheet provides an overview of several binary search templates, each s
 	- [Finding Closest Element](#3-finding-closest-element)
 	- [Order Agnostic Binary Search](#4-order-agnostic-binary-search)
 
----
-
 ## Basic Binary Search
 
 ### Template
@@ -52,8 +50,6 @@ def fn(arr, target):
 ### Description
 
 This is a standard binary search template used to find a target value in a sorted array. If the target is found, the function can be modified to return the index or perform a specific action. If the target is not found, the function returns the position where the target can be inserted to maintain the sorted order.
-
----
 
 ## Binary Search with Duplicate Elements
 
@@ -97,8 +93,6 @@ def fn(arr, target):
 
 These templates are particularly useful when dealing with arrays that contain duplicate elements. The first template finds the left-most insertion point for the target, which is useful when you want to insert the target before any existing duplicates. The second template finds the right-most insertion point, ideal for inserting the target after any duplicates.
 
----
-
 ## Binary Search on Sorted Data With Limited Range
 
 ### Rotated Sorted Array Search
@@ -132,8 +126,6 @@ def search(nums, target):
 ### Description
 
 This template is ideal for finding a target within a rotated sorted array (e.g., `[4, 5, 6, 7, 0, 1, 2]`). The logic determines which half of the array is sorted and adjusts the binary search range accordingly.
-
----
 
 ## Binary Search for Greedy Problems
 
@@ -185,8 +177,6 @@ def fn(arr):
 
 These templates are designed for problems where you need to find an optimal solution based on a greedy approach. The `check` function is problem-specific and determines whether a given condition is met. The first template is used to find the minimum value that satisfies the condition, while the second template finds the maximum value. These are particularly useful in optimization problems where you need to maximize or minimize a certain parameter.
 
----
-
 ## Advanced Topics in Binary Search
 
 ### Tuning Precision in Binary Search (Floating Point Targets)
@@ -212,8 +202,6 @@ def binary_search_precision(a, b, EPS=1e-7):
 ### Description
 
 This technique is used for binary search on floating-point ranges, such as finding square roots, optimizing continuous functions, or solving equation systems. The `EPS` constant dictates the desired precision.
-
----
 
 ## Applications of Binary Search
 
@@ -295,8 +283,6 @@ def order_agnostic_binary_search(arr, target):
 ### Description
 
 The **Order Agnostic Binary Search** is a versatile binary search algorithm that works on both ascending and descending sorted arrays. Instead of assuming the array's order, it determines it first by comparing the values at the start (`arr[0]`) and the end (`arr[-1]`) of the array.
-
----
 
 ## 📚 More Resources?
 
