@@ -1,8 +1,27 @@
+
 # Binary Search Cheat Sheet 🗺️
 
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 
 This cheat sheet provides an overview of several binary search templates, each suited for different scenarios in algorithmic problem-solving. Binary search is a powerful technique used to efficiently locate a target value within a sorted array or to determine an appropriate insertion point for a target value. The templates discussed here cover basic binary search, handling duplicate elements, and applications in greedy problems.
+
+## Table of Contents
+- [Basic Binary Search](#basic-binary-search)
+- [Binary Search with Duplicate Elements](#binary-search-with-duplicate-elements)
+	- [Left-most Insertion Point](#left-most-insertion-point)
+	- [Right-most Insertion Point](#right-most-insertion-point)
+- [Binary Search on Sorted Data With Limited Range](#binary-search-on-sorted-data-with-limited-range)
+	- [Rotated Sorted Array Search](#rotated-sorted-array-search)
+- [Binary Search for Greedy Problems](#binary-search-for-greedy-problems)
+	- [Finding a Minimum](#finding-a-minimum)
+	- [Finding a Maximum](#finding-a-maximum)
+- [Advanced Topics in Binary Search](#advanced-topics-in-binary-search)
+	- [Tuning Precision in Binary Search (Floating Point Targets)](#tuning-precision-in-binary-search-floating-point-targets)
+- [Applications of Binary Search](#applications-of-binary-search)
+	- [Binary Search on Answers](#1-binary-search-on-answers)
+	- [Peak Element Search](#2-peak-element-search)
+	- [Finding Closest Element](#3-finding-closest-element)
+	- [Order Agnostic Binary Search](#4-order-agnostic-binary-search)
 
 ---
 
