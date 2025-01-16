@@ -10,7 +10,7 @@ This is a repository that contains solutions to 📚 [LeetCode's Study Plans](ht
 
 The repository is organized based on the study plans from LeetCode.
 
-- [Binary Search](https://leetcode.com/studyplan/binary-search) is found at [Binary Search/](Binary%20Search)
+- [Binary Search](https://leetcode.com/studyplan/binary-search) is found in [Binary Search/](Binary%20Search)
 
 ## Prerequisites
 
