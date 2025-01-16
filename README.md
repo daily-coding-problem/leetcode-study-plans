@@ -15,6 +15,7 @@ The repository is organized based on the categories from LeetCode's Problem List
 ## Prerequisites
 
 - Python 3.9 or above should be installed.
+- Some problems may require [LeetCode Premium](https://leetcode.com/subscribe)
 
 ## Test
 
