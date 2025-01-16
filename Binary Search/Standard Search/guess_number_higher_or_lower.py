@@ -10,7 +10,6 @@ import unittest
 # def guess(num: int) -> int:
 
 # Mock guess function
-picked_number = float('inf')
 def guess(num: int) -> int:
     if num > picked_number:
         return -1

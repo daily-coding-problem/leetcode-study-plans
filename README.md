@@ -55,3 +55,12 @@ Python is often recommended for coding interviews due to several compelling reas
 These attributes make Python a preferred choice for many candidates preparing for coding interviews.
 To learn more about Python and its applications in coding interviews,
 check out the _Python for Coding Interviews_ course on [NeetCode](https://neetcode.io/courses) where you will learn effective Python for coding interviews.
+
+## 🗺️ Cheat Sheets?
+
+For each study plan, a dedicated `CHEAT_SHEET.md` has been included to provide quick references and shortcuts for solving problems efficiently.
+These cheat sheets summarize key concepts, common problem-solving patterns, and examples relevant to the respective study plan.
+
+### Available Cheat Sheets
+
+- [Binary Search Cheat Sheet](Binary%20Search/CHEAT_SHEET.md): Covers essential tips and tricks for mastering Binary Search problems, including examples and edge cases.
