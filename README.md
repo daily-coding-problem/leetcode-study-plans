@@ -8,7 +8,7 @@ This is a repository that contains solutions to 📚 [LeetCode's Study Plans](ht
 
 ## Folder Structure
 
-The repository is organized based on the categories from LeetCode's Problem List.
+The repository is organized based on the plans from LeetCode's study plans.
 
 - [Binary Search](https://leetcode.com/studyplan/binary-search) is found at [Binary Search/](Binary%20Search)
 
