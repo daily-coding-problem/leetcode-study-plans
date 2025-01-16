@@ -240,8 +240,42 @@ def find_closest(nums, target):
     # Compare the two closest indices
     if left >= len(nums) or (right >= 0 and abs(nums[right] - target) <= abs(nums[left] - target)):
         return right
+
     return left
 ```
+
+### 4. **Order Agnostic Binary Search**
+
+```python
+def order_agnostic_binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+
+    # Check if the array is ascending or descending
+    is_ascending = arr[left] < arr[right]
+
+    while left <= right:
+        mid = (left + right) // 2
+
+        if arr[mid] == target:
+            return mid  # Target found at index mid
+
+        if is_ascending:
+            if arr[mid] > target:
+                right = mid - 1
+            else:
+                left = mid + 1
+        else:  # Descending order
+            if arr[mid] < target:
+                right = mid - 1
+            else:
+                left = mid + 1
+
+    return -1  # Target not found
+```
+
+### Description
+
+The **Order Agnostic Binary Search** is a versatile binary search algorithm that works on both ascending and descending sorted arrays. Instead of assuming the array's order, it determines it first by comparing the values at the start (`arr[0]`) and the end (`arr[-1]`) of the array.
 
 ---
 
