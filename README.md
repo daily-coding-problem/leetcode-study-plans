@@ -10,7 +10,7 @@ This is a repository that contains solutions to 📚 [LeetCode's Study Plans](ht
 
 The repository is organized based on the study plans from LeetCode.
 
-- <img src="https://github.com/user-attachments/assets/5c2f8f64-587e-4d3a-8773-79889a3668eb" width="25px"> [Binary Search](https://leetcode.com/studyplan/binary-search) is found in [Binary Search/](Binary%20Search)
+- <img src="https://github.com/user-attachments/assets/0b70acb4-2bd5-4fee-8cae-44c3b04a7052" width="25px"> [Binary Search](https://leetcode.com/studyplan/binary-search) is found in [Binary Search/](Binary%20Search)
 
 ## Prerequisites
 
