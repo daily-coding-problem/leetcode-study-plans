@@ -3,11 +3,13 @@
 import unittest
 from collections import defaultdict
 
-class SnapshotArray:
 
+class SnapshotArray:
     def __init__(self, _: int):
         self.snap_id = 0
-        self.history = defaultdict(lambda: [(0, 0)])  # Default history with initial (snap_id, value)
+        self.history = defaultdict(
+            lambda: [(0, 0)]
+        )  # Default history with initial (snap_id, value)
 
     def set(self, index: int, value: int) -> None:
         # Fetch the last recorded snap_id for the given index
@@ -40,13 +42,18 @@ class SnapshotArray:
             else:
                 right = mid - 1
 
-        return snaps[right][1]  # The value corresponding to the largest snap_id ≤ the requested snap_id
+        return snaps[right][
+            1
+        ]  # The value corresponding to the largest snap_id ≤ the requested snap_id
+
 
 class TestSnapshotArray(unittest.TestCase):
     def test_initialization(self):
         # Test that the SnapshotArray initializes without errors and the default history is correct.
         obj = SnapshotArray(5)
-        for i in range(5):  # Check that every index initializes with a default value of 0
+        for i in range(
+            5
+        ):  # Check that every index initializes with a default value of 0
             self.assertEqual(obj.get(i, 0), 0)
 
     def test_set_and_get_before_snap(self):
@@ -128,4 +135,6 @@ class TestSnapshotArray(unittest.TestCase):
         for i in range(1000):
             obj.set(0, i)
             snap_id = obj.snap()
-            self.assertEqual(obj.get(0, snap_id), i)  # Value should match at each snapshot
+            self.assertEqual(
+                obj.get(0, snap_id), i
+            )  # Value should match at each snapshot

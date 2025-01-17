@@ -6,7 +6,6 @@ from collections import defaultdict
 
 
 class TimeMap:
-
     def __init__(self):
         self.store = defaultdict(list)
 
@@ -87,7 +86,9 @@ class TestTimeMap(unittest.TestCase):
 
         self.assertEqual(self.time_map.get("foo", 1), "bar")
         self.assertEqual(self.time_map.get("baz", 2), "qux")
-        self.assertEqual(self.time_map.get("baz", 1), "")  # baz doesn't have a value at or before 1
+        self.assertEqual(
+            self.time_map.get("baz", 1), ""
+        )  # baz doesn't have a value at or before 1
 
     def test_non_chronological_timestamps(self):
         """Test if the function works regardless of insertion order."""
@@ -104,7 +105,15 @@ class TestTimeMap(unittest.TestCase):
         self.time_map.set("foo", "late", 100000)
 
         self.assertEqual(self.time_map.get("foo", 0), "")  # no value at 0
-        self.assertEqual(self.time_map.get("foo", 1), "early")  # exact match at earliest
-        self.assertEqual(self.time_map.get("foo", 99999), "early")  # closest before 100000
-        self.assertEqual(self.time_map.get("foo", 100000), "late")  # exact match at 100000
-        self.assertEqual(self.time_map.get("foo", 100001), "late")  # closest after 100000
+        self.assertEqual(
+            self.time_map.get("foo", 1), "early"
+        )  # exact match at earliest
+        self.assertEqual(
+            self.time_map.get("foo", 99999), "early"
+        )  # closest before 100000
+        self.assertEqual(
+            self.time_map.get("foo", 100000), "late"
+        )  # exact match at 100000
+        self.assertEqual(
+            self.time_map.get("foo", 100001), "late"
+        )  # closest after 100000

@@ -3,12 +3,13 @@
 import unittest
 from typing import List
 
+
 def find_min(nums: List[int]) -> int:
     n = len(nums)
 
     left = 0
     right = n - 1
-    min_element = float('inf')
+    min_element = float("inf")
 
     while left < right:
         pivot = (left + right) // 2
@@ -20,6 +21,7 @@ def find_min(nums: List[int]) -> int:
             right = pivot - 1
 
     return min(min_element, nums[left])
+
 
 class TestFindMin(unittest.TestCase):
     def test_sorted_array(self):

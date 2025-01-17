@@ -3,6 +3,7 @@
 import unittest
 from typing import List
 
+
 def search_range(nums: List[int], target: int) -> List[int]:
     n = len(nums)
 
@@ -39,13 +40,14 @@ def search_range(nums: List[int], target: int) -> List[int]:
 
     # Make sure that the target is in range
     if (
-        left_index <= right_index < n and
-        nums[left_index] == target and
-        nums[right_index] == target
+        left_index <= right_index < n
+        and nums[left_index] == target
+        and nums[right_index] == target
     ):
         return [left_index, right_index]
 
     return [-1, -1]
+
 
 class TestSearchRange(unittest.TestCase):
     def test_multiple_occurrences(self):

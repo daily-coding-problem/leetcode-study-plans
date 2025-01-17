@@ -3,6 +3,7 @@
 import unittest
 from typing import List
 
+
 def search(nums: List[int], target: int) -> int:
     n = len(nums)
 
@@ -27,6 +28,7 @@ def search(nums: List[int], target: int) -> int:
                 left = mid + 1
 
     return -1
+
 
 class TestSearchRotatedSortedArray(unittest.TestCase):
     def test_target_in_rotated_array(self):

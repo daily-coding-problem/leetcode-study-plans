@@ -10,7 +10,8 @@ import unittest
 #     def get(self, index: int) -> int:
 #         pass
 
-def search(reader: 'ArrayReader', target: int) -> int:
+
+def search(reader: "ArrayReader", target: int) -> int:
     # Step 1: Initialize search range.
     low, high = 0, 1
 
@@ -20,7 +21,7 @@ def search(reader: 'ArrayReader', target: int) -> int:
         high *= 2
 
         # If out-of-bounds value occurs, break.
-        if reader.get(high) == 2 ** 31 - 1:
+        if reader.get(high) == 2**31 - 1:
             break
 
     # Step 3: Perform binary search within the determined range.
@@ -29,7 +30,7 @@ def search(reader: 'ArrayReader', target: int) -> int:
         value = reader.get(mid)
 
         # If mid is out of bounds, treat it as infinity
-        if value == 2 ** 31 - 1:
+        if value == 2**31 - 1:
             high = mid - 1  # Adjust high since out-of-bounds
             continue
 
@@ -44,6 +45,7 @@ def search(reader: 'ArrayReader', target: int) -> int:
     # Target not found
     return -1
 
+
 # Mock implementation of ArrayReader for testing purposes
 class ArrayReader:
     def __init__(self, arr):
@@ -53,6 +55,7 @@ class ArrayReader:
         if index < 0 or index >= len(self.arr):
             return 2**31 - 1  # Return out-of-bounds value
         return self.arr[index]
+
 
 class TestSearchFunction(unittest.TestCase):
     def test_example1(self):

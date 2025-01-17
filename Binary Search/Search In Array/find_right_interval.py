@@ -3,6 +3,7 @@
 import unittest
 from typing import List, Tuple
 
+
 def find_right_interval(intervals: List[List[int]]) -> List[int]:
     if not intervals:
         return []
@@ -46,6 +47,7 @@ def find_right_interval(intervals: List[List[int]]) -> List[int]:
 
     return result
 
+
 class TestFindRightInterval(unittest.TestCase):
     def test_no_intervals(self):
         self.assertEqual(find_right_interval([]), [])
@@ -57,22 +59,15 @@ class TestFindRightInterval(unittest.TestCase):
         self.assertEqual(find_right_interval([[1, 1]]), [0])
 
     def test_multiple_intervals_no_overlap(self):
-        self.assertEqual(
-            find_right_interval([[1, 2], [3, 4], [5, 6]]), [1, 2, -1]
-        )
+        self.assertEqual(find_right_interval([[1, 2], [3, 4], [5, 6]]), [1, 2, -1])
 
     def test_multiple_intervals_with_overlap(self):
-        self.assertEqual(
-            find_right_interval([[1, 4], [2, 3], [3, 4]]), [-1, 2, -1]
-        )
+        self.assertEqual(find_right_interval([[1, 4], [2, 3], [3, 4]]), [-1, 2, -1])
 
     def test_multiple_intervals_with_same_start(self):
-        self.assertEqual(
-            find_right_interval([[1, 2], [1, 3], [3, 4]]), [2, 2, -1]
-        )
+        self.assertEqual(find_right_interval([[1, 2], [1, 3], [3, 4]]), [2, 2, -1])
 
     def test_large_intervals(self):
         self.assertEqual(
-            find_right_interval([[1, 1000], [500, 1500], [1001, 2000]]),
-            [2, -1, -1]
+            find_right_interval([[1, 1000], [500, 1500], [1001, 2000]]), [2, -1, -1]
         )

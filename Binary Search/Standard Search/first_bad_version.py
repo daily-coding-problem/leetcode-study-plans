@@ -6,6 +6,7 @@ import unittest
 # The is_bad_version API is already defined for you.
 # def is_bad_version(version: int) -> bool:
 
+
 # Mock is_bad_version API for testing purposes
 def is_bad_version(version: int) -> bool:
     # This function needs to mimic an external API behavior.
@@ -17,7 +18,7 @@ def first_bad_version(n: int) -> int:
     left = 1
     right = n
 
-    earliest_bad_version = float('inf')
+    earliest_bad_version = float("inf")
 
     while left <= right:
         mid = (left + right) // 2
@@ -29,7 +30,7 @@ def first_bad_version(n: int) -> int:
         else:
             left = mid + 1
 
-    if earliest_bad_version == float('inf'):
+    if earliest_bad_version == float("inf"):
         return -1
 
     return earliest_bad_version
@@ -54,7 +55,7 @@ class TestFirstBadVersion(unittest.TestCase):
         self.assertEqual(first_bad_version(n), 10)
 
         # Test case 4: No bad version (all versions are good)
-        first_bad = float('inf')  # Simulate no bad version
+        first_bad = float("inf")  # Simulate no bad version
         self.assertEqual(first_bad_version(n), -1)
 
         # Test case 5: Testing with larger input size
@@ -71,5 +72,5 @@ class TestFirstBadVersion(unittest.TestCase):
 
         # Test case 7: Input with no bad versions in extreme edge case
         n = 2
-        first_bad = float('inf')
+        first_bad = float("inf")
         self.assertEqual(first_bad_version(n), -1)

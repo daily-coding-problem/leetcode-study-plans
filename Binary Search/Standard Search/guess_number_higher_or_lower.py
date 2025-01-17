@@ -9,6 +9,7 @@ import unittest
 #          otherwise return 0
 # def guess(num: int) -> int:
 
+
 # Mock guess function
 def guess(num: int) -> int:
     if num > picked_number:
@@ -17,6 +18,7 @@ def guess(num: int) -> int:
         return 1
     else:
         return 0
+
 
 def guess_number(n: int) -> int:
     left = 0
@@ -38,6 +40,7 @@ def guess_number(n: int) -> int:
             right = mid - 1
 
     return n
+
 
 class TestGuessNumber(unittest.TestCase):
     def test_number_found(self):
@@ -63,5 +66,6 @@ class TestGuessNumber(unittest.TestCase):
     def test_large_number(self):
         global picked_number
         picked_number = 999_999
-        self.assertEqual(guess_number(1_000_000), 999_999)  # Large n, picked_number is 999,999
-
+        self.assertEqual(
+            guess_number(1_000_000), 999_999
+        )  # Large n, picked_number is 999,999

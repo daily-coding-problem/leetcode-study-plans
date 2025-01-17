@@ -3,6 +3,7 @@
 import unittest
 from typing import List
 
+
 def search_left(nums: List[int], target: int) -> int:
     n = len(nums)
 
@@ -21,6 +22,7 @@ def search_left(nums: List[int], target: int) -> int:
             right = mid - 1
 
     return left
+
 
 class TestSearchLeft(unittest.TestCase):
     def test_target_found(self):

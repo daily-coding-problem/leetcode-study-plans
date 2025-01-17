@@ -3,6 +3,7 @@
 import unittest
 from typing import List
 
+
 def find_min(nums: List[int]) -> int:
     left, right = 0, len(nums) - 1
 
@@ -22,6 +23,7 @@ def find_min(nums: List[int]) -> int:
             right -= 1
 
     return nums[left]
+
 
 class TestFindMin(unittest.TestCase):
     def test_example_cases(self):

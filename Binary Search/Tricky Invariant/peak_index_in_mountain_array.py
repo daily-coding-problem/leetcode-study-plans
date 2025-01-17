@@ -3,6 +3,7 @@
 import unittest
 from typing import List
 
+
 def peak_index_in_mountain_array(mountain: List[int]) -> int:
     n = len(mountain)
 
@@ -27,6 +28,7 @@ def peak_index_in_mountain_array(mountain: List[int]) -> int:
 
     # At the end of the loop, left == right and it points to the peak index.
     return left
+
 
 class TestPeakIndexInMountainArray(unittest.TestCase):
     def test_peak_at_start(self):
@@ -56,7 +58,7 @@ class TestPeakIndexInMountainArray(unittest.TestCase):
 
     def test_large_numbers(self):
         """Mountain array with maximum possible values."""
-        mountain = [10 ** 6 - 1, 10 ** 6, 10 ** 6 - 2]
+        mountain = [10**6 - 1, 10**6, 10**6 - 2]
         self.assertEqual(peak_index_in_mountain_array(mountain), 1)
 
     def test_multiple_shapes(self):

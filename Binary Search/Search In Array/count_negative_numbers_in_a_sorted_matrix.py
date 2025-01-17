@@ -3,6 +3,7 @@
 import unittest
 from typing import List
 
+
 def count_negatives(grid: List[List[int]]) -> int:
     def count_negatives_in_row(row: List[int]) -> int:
         n = len(row)
@@ -27,8 +28,8 @@ def count_negatives(grid: List[List[int]]) -> int:
 
     return result
 
-class TestCountNegatives(unittest.TestCase):
 
+class TestCountNegatives(unittest.TestCase):
     def test_empty_grid(self):
         # Test case with an empty grid
         grid = []
@@ -61,11 +62,13 @@ class TestCountNegatives(unittest.TestCase):
 
     def test_large_matrix(self):
         # Test case with a large matrix for performance validation
-        grid = [[5, 4, 3, 2, -1],
-                [4, 3, 2, -1, -2],
-                [3, 2, -1, -2, -3],
-                [2, -1, -2, -3, -4],
-                [-1, -2, -3, -4, -5]]
+        grid = [
+            [5, 4, 3, 2, -1],
+            [4, 3, 2, -1, -2],
+            [3, 2, -1, -2, -3],
+            [2, -1, -2, -3, -4],
+            [-1, -2, -3, -4, -5],
+        ]
         self.assertEqual(count_negatives(grid), 15)
 
     def test_single_column(self):
