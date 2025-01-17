@@ -16,6 +16,7 @@ The repository is organized based on the study plans from LeetCode.
 
 - Python 3.9 or above should be installed.
 - Some problems may require [LeetCode Premium](https://leetcode.com/subscribe).
+- [Black](https://black.readthedocs.io/en/stable/) formatter should be installed to ensure consistent code formatting.
 
 ## Test
 
