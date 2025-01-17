@@ -1,5 +1,5 @@
 
-# Binary Search Cheat Sheet 🗺️
+#  <img src="https://github.com/user-attachments/assets/5c2f8f64-587e-4d3a-8773-79889a3668eb" width="25px"> Binary Search Cheat Sheet 🗺️
 
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 
