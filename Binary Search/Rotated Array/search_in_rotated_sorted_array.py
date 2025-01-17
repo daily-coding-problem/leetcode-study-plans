@@ -3,7 +3,7 @@
 import unittest
 from typing import List
 
-def search( nums: List[int], target: int) -> int:
+def search(nums: List[int], target: int) -> int:
     n = len(nums)
 
     left = 0
