@@ -10,20 +10,24 @@ def h_index(citations: List[int]) -> int:
     left = 0
     right = n - 1
 
+    # We need to find the rightmost 'index' such that: (citations[index] <= n - index)
     while left <= right:
-        mid = (left + right) // 2
+        mid = left + (right - left) // 2
 
-        # If the citation at mid, equals the number of papers with citations >= citations[mid]
+        # There are (n - mid) papers with an equal or higher citation count than citations[mid]
+        # If (citations[mid] == n - mid) it's the optimal result and can be returned right away
         if citations[mid] == n - mid:
-            return citations[mid]  # Return the h-index
+            return n - mid
 
-        # If citations at mid are less than the required h-index condition
+        # If citations[mid] are less than (n - mid), narrow down on the right half to look for a paper
+        # at a future index that meets the h-index criteria. Otherwise, narrow down on the left half
         if citations[mid] < n - mid:
-            left = mid + 1  # Shift the search to the right half
+            left = mid + 1
         else:
-            right = mid - 1  # Shift the search to the left half
+            right = mid - 1
 
-    # If no exact match is found, return the best possible h-index value
+    # We didn't find an exact match, so there are exactly (n - left) papers that have citations
+    # greater than or equal to citations[left], and that is our answer
     return n - left
 
 
