@@ -1,4 +1,5 @@
 # LeetCode Study Plan Solutions [![Python Unit Tests](https://github.com/daily-coding-problem/neetcode-150/actions/workflows/python-unittests.yml/badge.svg)](https://github.com/daily-coding-problem/neetcode-150/actions/workflows/python-unittests.yml) [![Format Check](https://github.com/daily-coding-problem/leetcode-study-plans/actions/workflows/format-check.yml/badge.svg)](https://github.com/daily-coding-problem/leetcode-study-plans/actions/workflows/format-check.yml)
+[![License: PolyForm Shield 1.0.0](https://img.shields.io/badge/License-PolyForm%20Shield%201.0.0-blue.svg)](https://polyformproject.org/licenses/shield/1.0.0/)
 
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Pytest](https://img.shields.io/badge/-Pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
